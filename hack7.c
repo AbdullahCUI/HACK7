@@ -25,3 +25,14 @@ int containsWithin(const int *arr, int size, int x, int i, int j) {
     return 0; // false
 }
 
+// Function to create a padded copy of the array with a new size
+int *paddedCopy(const int *arr, int oldSize, int newSize) {
+    int *newArr = (int *)malloc(newSize * sizeof(int));
+
+    // Copy elements up to the minimum of oldSize and newSize
+    int minSize = (oldSize < newSize) ? oldSize : newSize;
+    for (int i = 0; i < minSize; ++i) {
+        newArr[i] = arr[i];
+    }
+
+
