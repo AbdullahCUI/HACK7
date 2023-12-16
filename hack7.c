@@ -82,5 +82,16 @@ int main() {
         printf("%d ", paddedArr[i]);
     }
 
+    printf("\n");
+    free(paddedArr);
+
+    // reverse
+    reverse(arr, size);
+    printf("Reversed Array: ");
+    for (int i = 0; i < size; ++i) {
+        printf("%d ", arr[i]);
+    }
+    printf("\n");
+
 
 
