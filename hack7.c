@@ -64,5 +64,23 @@ int *reverseCopy(const int *arr, int size) {
     return newArr;
 }
 
+int main() {
+    int arr[] = {10, 15, 5, 25, 0};
+    int size = sizeof(arr) / sizeof(arr[0]);
+
+    // contains
+    printf("Contains 5: %d\n", contains(arr, size, 5));
+
+    // containsWithin
+    printf("Contains 15 within indices 1 and 3: %d\n", containsWithin(arr, size, 15, 1, 3));
+
+    // paddedCopy
+    int newSize = 8;
+    int *paddedArr = paddedCopy(arr, size, newSize);
+    printf("Padded Copy: ");
+    for (int i = 0; i < newSize; ++i) {
+        printf("%d ", paddedArr[i]);
+    }
+
 
 
