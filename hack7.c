@@ -35,4 +35,12 @@ int *paddedCopy(const int *arr, int oldSize, int newSize) {
         newArr[i] = arr[i];
     }
 
+    // Pad with zeros if newSize is greater than oldSize
+    for (int i = oldSize; i < newSize; ++i) {
+        newArr[i] = 0;
+    }
+
+    return newArr;
+}
+
 
