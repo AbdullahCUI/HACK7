@@ -92,6 +92,16 @@ int main() {
         printf("%d ", arr[i]);
     }
     printf("\n");
+     // reverseCopy
+    int *reverseArr = reverseCopy(arr, size);
+    printf("Reverse Copy: ");
+    for (int i = 0; i < size; ++i) {
+        printf("%d ", reverseArr[i]);
+    }
+    printf("\n");
+    free(reverseArr);
 
+    return 0;
+}
 
 
