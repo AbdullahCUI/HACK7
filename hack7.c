@@ -43,7 +43,7 @@ int *paddedCopy(const int *arr, int oldSize, int newSize) {
     return newArr;
 }
 
-// Function to reverse the elements in the array
+// 
 void reverse(int *arr, int size) {
     for (int i = 0, j = size - 1; i < j; ++i, --j) {
         // Swap elements at positions i and j
@@ -51,6 +51,17 @@ void reverse(int *arr, int size) {
         arr[i] = arr[j];
         arr[j] = temp;
     }
+}
+
+// Function to create a new array with elements in reverse order
+int *reverseCopy(const int *arr, int size) {
+    int *newArr = (int *)malloc(size * sizeof(int));
+    
+    for (int i = 0, j = size - 1; i < size; ++i, --j) {
+        newArr[i] = arr[j];
+    }
+
+    return newArr;
 }
 
 
